@@ -1,5 +1,10 @@
 counts = dict()
-text = open('mbox-short.txt')
+fname = input('Enter a file name: ')
+try:
+    text = open(fname)
+except:
+    print(f'File cannot be open: {fname}')
+    exit()
 for line in text:
     line = line.rstrip()
     line = line.split()
@@ -13,7 +18,5 @@ for line in text:
             counts[word] = 1
         else:
             counts[word] += 1
-    print(counts)
-
-
-
+my_list = list(counts.items())
+print(my_list)
