@@ -1,0 +1,22 @@
+# Ex2.15.2 napisz program, który wykonuje funkcje input() i wyswietla wiadomośc powitalną
+name = input('What is your name? ')
+wm = f'Hello {name}'
+print(wm)
+
+# Ex2.15.3 . Napisz program, który wyświetli użytkownikowi pytanie o liczbę godzin pracy i stawkę za
+# godzinę w celu obliczenia wynagrodzenia.
+
+hour = input('How many hours did you work this week? ')
+rate = input('What is your rate per hour? ')
+sallary = int(hour) * int(rate)
+pay = f'Your sallary is ${sallary}'
+print(pay)
+
+# Ex2.15.5 Napisz program, który prosi użytkownika o podanie temperatury w skali Celsjusza,
+# przelicza ją na skalę Fahrenheita i wyświetla przeliczoną temperaturę.
+
+q = input('What is temperature in Celsius? ')
+tempc = int(q)
+tempf = (tempc * 9/5) + 32
+print(f'{tempc} Celsius is {tempf} Fahrenheit')
+
