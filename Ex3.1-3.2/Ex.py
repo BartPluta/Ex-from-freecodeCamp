@@ -25,28 +25,29 @@ if overtime > 0:
     Your Rate: {rate}
     Your pay: {normal_pay + extra_pay}''')
     
-#Jako cos dodatkowego stworzyłęm funkcja która wykonuje zadania z ćwiczenia powyzej
+#Jako cos dodatkowego stworzyłęm funkcja która wykonuje zadania z ćwiczenia powyzej,a jednocześnie mogłaby zostać użyta dla wielu osób dzięki dodaniu paramtetru z imieniem.
 
 
-def computeypay(hours, rate):
+def computeypay(name, hours, rate):
     overtime = hours - 40
     if overtime > 0:
         normal_pay = rate * (hours - overtime)
         extra_pay = overtime * (rate * 1.5)
         print(f'''
+        {name}
         Your Hours: {hours}
         Your Rate: {rate}
         Your pay: {normal_pay + extra_pay}''')
     elif overtime < 0:
         normal_pay = rate * hours
         print(f'''
+        {name}
         Your Hours: {hours}
         Your Rate: {rate}
         Your pay: {normal_pay}''')
 
 
-computeypay(20, 10)
-
+computeypay('Bartek', 20, 10)
 
 
 
